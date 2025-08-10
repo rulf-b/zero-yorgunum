@@ -1,3 +1,7 @@
+# Next.js build artifacts to include in repo
+!.next/BUILD_ID
+!.next/standalone/
+!.next/static/
 # Next.js build cache (do not push to repo)
 .next/cache/
 # See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
@@ -11,11 +15,7 @@
 /coverage
 
 # next.js
-# Ignore everything in .next except standalone and static
-/.next/*
-!.next/BUILD_ID
-!.next/standalone/
-!.next/static/
+.next/*
 /out/
 
 # production
