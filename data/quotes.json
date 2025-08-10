@@ -1,0 +1,30 @@
+[
+  {
+    "name": "aa",
+    "phone": "1242234223",
+    "email": "",
+    "tvBrand": "Dijitsu",
+    "tvModel": "",
+    "screenSize": "55\"",
+    "issueType": "Kırık Ekran",
+    "issueDescription": "",
+    "location": "Çekmeköy",
+    "id": "1754322662078",
+    "read": false,
+    "createdAt": "2025-08-04T15:51:02.079Z"
+  },
+  {
+    "name": "13",
+    "phone": "13",
+    "email": "",
+    "tvBrand": "Altus",
+    "tvModel": "",
+    "screenSize": "75\"",
+    "issueType": "Güç Yok",
+    "issueDescription": "",
+    "location": "Beyoğlu",
+    "id": "1754322641369",
+    "read": false,
+    "createdAt": "2025-08-04T15:50:41.369Z"
+  }
+]

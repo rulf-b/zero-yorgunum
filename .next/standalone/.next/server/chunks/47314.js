@@ -1,0 +1,1 @@
+"use strict";exports.id=47314,exports.ids=[47314],exports.modules={47314:(e,t,s)=>{s.r(t),s.d(t,{$$typeof:()=>d,__esModule:()=>i,default:()=>l});var o=s(17536);let r=(0,o.createProxy)(String.raw`C:\Users\ibrahim\Downloads\zero-git\components\ui\SiteActions.tsx`),{__esModule:i,$$typeof:d}=r,a=r.default,l=a}};
