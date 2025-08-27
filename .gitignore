@@ -1,42 +1,49 @@
-# Next.js build artifacts to include in repo
-!.next/BUILD_ID
-!.next/standalone/
-!.next/static/
-# Next.js build cache (do not push to repo)
-.next/cache/
-# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
-
-# dependencies
-/node_modules
-/.pnp
+## Node modules and package manager artifacts
+/node_modules/
+/.pnp/
 .pnp.js
 
-# testing
-/coverage
-
-# next.js
-.next/*
-/out/
-
-# production
-/build
-
-# misc
-.DS_Store
-*.pem
-
-# debug
+## Logs
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 
-# local env files
-.env
-.env*.local
+## Testing
+/coverage/
 
-# vercel
-.vercel
+## Next.js output
+# Ignore the whole .next build folder but allow specific produced assets when
+# you intentionally commit them (standalone/static/BUILD_ID). Exceptions must
+# appear after the ignore if you add them; currently we keep .next fully out.
+/.next/
+/out/
 
-# typescript
+## Build outputs
+/build/
+/dist/
+
+## Environment
+# Keep local env files out of the repo
+/.env
+.env.*.local
+.env.local
+
+## Vercel
+/.vercel/
+
+## OS files
+.DS_Store
+Thumbs.db
+
+## IDEs
+.vscode/
+.idea/
+
+## Misc
+*.pem
+
+## Typescript
 *.tsbuildinfo
-next-env.d.ts
+
+## Keep next-env.d.ts tracked (do not ignore)
+# next-env.d.ts

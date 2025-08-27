@@ -1,0 +1,1 @@
+"use strict";exports.id=22564,exports.ids=[22564],exports.modules={22564:(t,e,i)=>{i.d(e,{X:()=>r});class r{static checkLoginAttempts(t="default"){return{allowed:!0}}static recordFailedAttempt(t="default"){}static clearLoginAttempts(t="default"){}static formatRemainingTime(t){return`${Math.ceil(t/6e4)} dakika`}static getClientFingerprint(){return"server"}}}};

@@ -1,6 +1,8 @@
 "use client";
 import React, { useState, useEffect } from "react";
 
+const ADMIN_CLIENT_TOKEN = process.env.NEXT_PUBLIC_ADMIN_API_TOKEN || 'admin-token';
+
 export default function Admin2UserPage() {
   const [admin2User, setAdmin2User] = useState({ username: '', password: '' });
   const [admin2UserLoading, setAdmin2UserLoading] = useState(false);
@@ -8,7 +10,7 @@ export default function Admin2UserPage() {
 
   useEffect(() => {
     setAdmin2UserLoading(true);
-    fetch('/api/admin-users')
+  fetch('/api/admin-users', { headers: { 'x-admin-token': ADMIN_CLIENT_TOKEN } })
       .then(res => res.json())
       .then(data => {
         if (data.username) setAdmin2User({ username: data.username, password: data.password });
@@ -22,7 +24,7 @@ export default function Admin2UserPage() {
     setAdmin2UserMsg('');
     const res = await fetch('/api/admin-users', {
       method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
+      headers: { 'Content-Type': 'application/json', 'x-admin-token': ADMIN_CLIENT_TOKEN },
       body: JSON.stringify(admin2User)
     });
     if (res.ok) {

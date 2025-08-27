@@ -4,13 +4,16 @@ import { useRouter } from 'next/navigation';
 import { SecureStorage, migrateOldStorage } from '@/lib/secure-storage';
 import { AdminSecurity } from '@/lib/admin-security';
 
+// Read admin API token from public env at build time; fallback preserves current behavior
+const ADMIN_CLIENT_TOKEN = process.env.NEXT_PUBLIC_ADMIN_API_TOKEN || 'admin-token';
+
 // Log helper
 async function logAdmin2Action(action: string, details: any) {
   await fetch('/api/admin2-log', {
     method: 'POST',
     headers: { 
       'Content-Type': 'application/json',
-      'x-admin-token': 'admin-token'
+  'x-admin-token': ADMIN_CLIENT_TOKEN
     },
     body: JSON.stringify({
       timestamp: new Date().toISOString(),
@@ -125,7 +128,7 @@ export default function Admin2Panel() {
     
     const res = await fetch('/api/admin-users', {
       headers: {
-        'x-admin-token': 'admin-token'
+  'x-admin-token': ADMIN_CLIENT_TOKEN
       }
     });
     if (res.ok) {

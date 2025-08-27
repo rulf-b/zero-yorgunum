@@ -1,0 +1,1 @@
+"use strict";exports.id=31503,exports.ids=[31503],exports.modules={31503:(e,t,s)=>{s.r(t),s.d(t,{$$typeof:()=>d,__esModule:()=>a,default:()=>i});var o=s(17536);let r=(0,o.createProxy)(String.raw`/app/components/home/Testimonials.tsx`),{__esModule:a,$$typeof:d}=r,p=r.default,i=p}};

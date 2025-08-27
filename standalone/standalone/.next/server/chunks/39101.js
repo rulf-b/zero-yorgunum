@@ -1,0 +1,1 @@
+"use strict";exports.id=39101,exports.ids=[39101],exports.modules={39101:(e,t,o)=>{o.r(t),o.d(t,{$$typeof:()=>p,__esModule:()=>d,default:()=>u});var r=o(17536);let s=(0,r.createProxy)(String.raw`/app/components/home/QuoteSection.tsx`),{__esModule:d,$$typeof:p}=s,a=s.default,u=a}};
